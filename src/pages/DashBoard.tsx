@@ -1,7 +1,9 @@
+import NavBar from "@/utils/NavBar"
+
 const MyDashboard = () =>{
   return(
     <div>
-     <h1>My dashboard</h1>
+      <NavBar />
     </div>
   )
 }
