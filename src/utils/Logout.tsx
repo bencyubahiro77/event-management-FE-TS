@@ -13,13 +13,12 @@ const LogoutButton = () => {
   return (
    <div>
      <h3
-        className="text-white cursor-pointer border border-green-900 px-2 py-2 rounded-lg"
+        className="text-black cursor-pointer  px-2 py-2 rounded-lg"
         onClick={handleLogout}
     >
         <FontAwesomeIcon
         icon={faArrowRightFromBracket}
-        className="mr-2 ml-2"
-        style={{ color: "#f7f7f8" }}
+        className="mr-2 ml-2 text-black"
         />
         Logout
     </h3>
