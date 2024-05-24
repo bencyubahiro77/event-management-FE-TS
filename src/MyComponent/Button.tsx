@@ -6,16 +6,16 @@ interface ButtonPorps{
     value:string,
     color:string,
     width:string,
-    navigate:MouseEventHandler<HTMLButtonElement>;
-    loading:boolean,
-    disabled:boolean
+    onClick:MouseEventHandler<HTMLButtonElement>;
+    loading?:boolean,
+    disabled?:boolean
 }
 
-const MyButton= ({value,color,width,navigate, loading, disabled}:ButtonPorps)=>{
+const MyButton= ({value,color,width,onClick, loading, disabled}:ButtonPorps)=>{
   return(
     <Button 
       style={{ backgroundColor: color, width: width }}
-      onClick={navigate}
+      onClick={onClick}
       disabled={disabled}
       className='mt-4'
     >

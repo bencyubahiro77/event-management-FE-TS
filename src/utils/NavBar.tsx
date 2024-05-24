@@ -8,15 +8,17 @@ const NavBar : React.FC = () => {
   const [isDropdownOpen , setIsDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
+    setIsMenuOpen((prev) => !prev);
+    setIsDropdownOpen(false)
   };
 
   const toggleDropdown = () =>{
     setIsDropdownOpen(prev => !prev);
+    setIsMenuOpen(false)
   }
 
   return (
-    <nav className="flex items-center justify-between xl:pl-16 xl:pr-16 gradient bg-red-400 h-20 p-4 fixed w-full">
+    <nav className="flex items-center justify-between xl:pl-16 xl:pr-16 gradient bg-red-400 h-20 p-4 relative w-full">
       <h1 className="text-2xl secondary-color font-extrabold ">
         <h3
          className="cursor-pointer"
@@ -34,7 +36,7 @@ const NavBar : React.FC = () => {
         >
           <li className="y-6 xl:my-0 ml-4 mr-4 my-6">
             <h3
-              className="my-6 no-underline secondary-color text-[#170e7d] font-bold xl:my-0 hover:text-[#170e7d]"
+              className="my-6 no-underline secondary-color text-blue-700 font-bold xl:my-0 p-2 rounded-lg hover:bg-blue-700 hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
@@ -43,7 +45,7 @@ const NavBar : React.FC = () => {
           <li className="y-6 xl:my-0 ml-4 my-8 ">
             <h3
          
-              className="my-6 no-underline secondary-color text-[#170e7d] font-bold xl:my-0 hover:text-[#170e7d]"
+              className="my-6 no-underline secondary-color text-blue-700 font-bold xl:my-0 p-2 rounded-lg hover:bg-blue-700 hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               About
@@ -52,7 +54,7 @@ const NavBar : React.FC = () => {
           <li className="y-6 xl:my-0  secondary-color hover:main-colorr  font-bold ml-4 mr-4 my-8">
             <h3
     
-             className="my-6 no-underline secondary-color text-[#170e7d] font-bold xl:my-0 hover:text-[#170e7d]"
+             className="my-6 no-underline secondary-color text-blue-700 font-bold xl:my-0 p-2 rounded-lg hover:bg-blue-700 hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               Projects
@@ -60,7 +62,7 @@ const NavBar : React.FC = () => {
           </li>
           <li className="y-6 xl:my-0  secondary-color  font-bold ml-4 mr-4 my-8">
             <h3
-              className="my-6 no-underline secondary-color text-[#170e7d] font-bold xl:my-0 hover:text-[#170e7d]"
+              className="my-6 no-underline secondary-color text-blue-700 font-bold xl:my-0 p-2 rounded-lg hover:bg-blue-700 hover:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact

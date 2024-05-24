@@ -27,13 +27,12 @@ const LoginForm = () => {
   }
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="drop-shadow-lg ">
-        <form className="box bg-white rounded-lg md:rounded-none p-4">
+    <div className="flex justify-center items-center h-screen homebackground ">
+      <div className="drop-shadow-lg">
+        <form className="md:box  bg-white rounded-lg md:rounded-none p-4">
           <div className="text-bold mx-10 my-12 max-w-xl w-72">
             <h3 className="font-bold mb-4 text-customGray text-2xl text-center">
-                  Welcome Back,
-                  <br className="md:hidden" /> Log in
+                  Sign In
             </h3>
             <div className="grid pb-4 pt-4">
               <MyLabel value="Email" />
@@ -48,7 +47,7 @@ const LoginForm = () => {
               value="Login"
               color="blue"
               width="100%"
-              navigate= {handleSubmit}
+              onClick= {handleSubmit}
               loading={loading}
               disabled={email ==='' || password ===''}
             />
